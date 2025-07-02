@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
@@ -19,7 +20,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="light" suppressHydrationWarning={true}>
-      <body className={inter.variable} suppressHydrationWarning={true}>
+      <body className={`${inter.variable} relative`} suppressHydrationWarning={true}>
+        {/* Decorative top border with rose-red and teal-blue */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-rose-red to-teal-blue"></div>
         <Navbar />
         {children}
         <Footer />

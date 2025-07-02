@@ -26,17 +26,20 @@ const features = [
 
 const WhyChooseMella = () => {
   return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-4">
+    <section className="py-16 bg-white relative overflow-hidden">
+      {/* Decorative background elements */}
+      <div className="absolute -top-10 -right-10 w-40 h-40 bg-peach/30 rounded-full blur-3xl"></div>
+      <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-soft-blue/30 rounded-full blur-3xl"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <motion.h2 
-            className="text-3xl md:text-4xl font-bold text-rose-red mb-4"
+            className="text-3xl md:text-4xl font-bold text-peach mb-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            Why Choose Mella
+            Why Choose Mella Counseling Center?
           </motion.h2>
           <motion.p 
             className="text-dark-gray max-w-2xl mx-auto"
@@ -45,30 +48,24 @@ const WhyChooseMella = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            At Mella Counseling Center, we're committed to providing exceptional care and support for your mental health journey.
+            We are committed to providing compassionate, personalized care to support your mental health journey.
           </motion.p>
         </div>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => {
-            const Icon = feature.icon;
-            return (
-              <motion.div 
-                key={index}
-                className="bg-light-pastel-1/30 p-6 rounded-xl hover-lift"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <div className="bg-white w-12 h-12 rounded-full flex items-center justify-center mb-4 shadow-soft">
-                  <Icon className="h-6 w-6 text-teal-blue" />
-                </div>
-                <h3 className="text-xl font-semibold text-rose-red mb-2">{feature.title}</h3>
-                <p className="text-dark-gray">{feature.description}</p>
-              </motion.div>
-            );
-          })}
+          {features.map((feature, index) => (
+            <motion.div
+              key={feature.title}
+              className={`bg-white p-6 rounded-xl shadow-soft hover-lift relative overflow-hidden border-l-4 ${index % 2 === 0 ? 'border-peach' : 'border-soft-blue'}`}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <feature.icon className={`w-10 h-10 mb-4 ${index % 2 === 0 ? 'text-peach' : 'text-soft-blue'}`} />
+              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+              <p className="text-dark-gray">{feature.description}</p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

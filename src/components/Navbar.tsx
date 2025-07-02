@@ -1,12 +1,20 @@
 'use client';
+// Force client-side only rendering to avoid hydration mismatch
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  // Only render the logo on the client side to avoid hydration mismatch
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -41,8 +49,20 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="text-2xl font-bold text-rose-red">
-              Mella
+            <Link href="/" className="flex items-center">
+              {/* {mounted ? (
+                <Image 
+                  src="/no title logo mella.png" 
+                  alt="Mella Logo" 
+                  width={40} 
+                  height={40} 
+                  className="h-10 w-auto" 
+                />
+              ) : (
+                <span className="text-2xl font-bold text-rose-red">Mella</span>
+              )}
+               */}
+               <h1 className="text-2xl font-bold text-rose-red">Mella Counseling</h1>
             </Link>
           </div>
           

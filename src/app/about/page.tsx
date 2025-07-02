@@ -66,16 +66,11 @@ export default function AboutPage() {
               transition={{ duration: 0.5 }}
             >
               <div className="relative w-full h-[400px] rounded-2xl overflow-hidden">
-                {/* Replace with your actual mission image */}
-                <div className="absolute inset-0 bg-light-pastel-2 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="text-6xl mb-4">🌱</div>
-                    <div className="text-2xl font-medium text-teal-blue">Mission Image</div>
-                    <div className="text-sm text-dark-gray mt-2">
-                      (Replace with your actual mission image)
-                    </div>
-                  </div>
-                </div>
+                <img 
+                  src="/our-mission.jpg" 
+                  alt="Black female therapist in a counseling session" 
+                  className="w-full h-full object-cover" 
+                />
               </div>
             </motion.div>
           </div>
@@ -113,16 +108,12 @@ export default function AboutPage() {
               transition={{ duration: 0.5 }}
             >
               <div className="relative w-full h-[400px] rounded-2xl overflow-hidden">
-                {/* Replace with your actual approach image */}
-                <div className="absolute inset-0 bg-light-pastel-2 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="text-6xl mb-4">🤝</div>
-                    <div className="text-2xl font-medium text-teal-blue">Approach Image</div>
-                    <div className="text-sm text-dark-gray mt-2">
-                      (Replace with your actual approach image)
-                    </div>
-                  </div>
-                </div>
+                {/* Approach image */}
+                <img 
+                  src="/Approac- Image-20079900.jpg" 
+                  alt="Our therapeutic approach" 
+                  className="w-full h-full object-cover" 
+                />
               </div>
             </motion.div>
           </div>
@@ -130,85 +121,66 @@ export default function AboutPage() {
       </section>
 
       {/* Our Team Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <motion.h2 
-              className="text-3xl font-bold text-rose-red mb-4"
-              initial={{ opacity: 0, y: 20 }}
+      <section className="py-20 bg-light-pastel-1/40">
+        <div className="container mx-auto px-6">
+          <div className="text-center max-w-4xl mx-auto mb-16">
+            <motion.h2
+              className="text-4xl md:text-5xl font-extrabold text-peach mb-6 tracking-wide"
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.6 }}
             >
-              Our Team
+              Meet Our Team
             </motion.h2>
-            <motion.p 
-              className="text-dark-gray"
-              initial={{ opacity: 0, y: 20 }}
+            <motion.p
+              className="text-dark-gray text-lg max-w-3xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
             >
-              Meet our dedicated team of mental health professionals committed to supporting your well-being journey.
+              Our team of experienced mental health professionals is committed to supporting your well-being journey with personalized care and expertise.
             </motion.p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
             {/* Team Member 1 */}
-            <motion.div 
-              className="bg-white rounded-xl shadow-soft p-6 text-center hover-lift"
-              initial={{ opacity: 0, y: 20 }}
+            <motion.div
+              className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300"
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.6 }}
             >
-              <div className="w-32 h-32 rounded-full bg-light-pastel-2 mx-auto mb-4 flex items-center justify-center">
-                {/* Replace with actual team member photo */}
-                <span className="text-4xl">👩‍⚕️</span>
+              <div className="w-48 h-48 rounded-full overflow-hidden mx-auto mb-6 border-8 border-peach shadow-xl">
+                <img
+                  src="/selam.jpg"
+                  alt="Selamawit Mosisa"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <h3 className="text-xl font-semibold text-rose-red mb-1">Dr. Sarah Johnson</h3>
-              <p className="text-teal-blue mb-3">Clinical Director</p>
-              <p className="text-dark-gray text-sm">
-                With over 15 years of experience, Dr. Johnson specializes in trauma-informed care and cognitive behavioral therapy.              
-              </p>
+              <h3 className="text-2xl font-bold text-peach mb-2 tracking-tight">Selamawit Mosisa</h3>
+              <p className="text-soft-blue font-semibold mb-4 uppercase tracking-wide">Health Professional and Therapist</p>
             </motion.div>
-            
+
             {/* Team Member 2 */}
-            <motion.div 
-              className="bg-white rounded-xl shadow-soft p-6 text-center hover-lift"
-              initial={{ opacity: 0, y: 20 }}
+            <motion.div
+              className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300"
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <div className="w-32 h-32 rounded-full bg-light-pastel-2 mx-auto mb-4 flex items-center justify-center">
-                {/* Replace with actual team member photo */}
-                <span className="text-4xl">👨‍⚕️</span>
+              <div className="w-48 h-48 rounded-full overflow-hidden mx-auto mb-6 border-8 border-peach shadow-xl">
+                <img
+                  src="Liham.webp"
+                  alt="Liham kinfe"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <h3 className="text-xl font-semibold text-rose-red mb-1">Michael Abebe</h3>
-              <p className="text-teal-blue mb-3">Art Therapist</p>
-              <p className="text-dark-gray text-sm">
-                Michael brings creativity to healing through specialized training in art therapy and expressive arts.              
-              </p>
-            </motion.div>
-            
-            {/* Team Member 3 */}
-            <motion.div 
-              className="bg-white rounded-xl shadow-soft p-6 text-center hover-lift"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <div className="w-32 h-32 rounded-full bg-light-pastel-2 mx-auto mb-4 flex items-center justify-center">
-                {/* Replace with actual team member photo */}
-                <span className="text-4xl">👩‍⚕️</span>
-              </div>
-              <h3 className="text-xl font-semibold text-rose-red mb-1">Tigist Haile</h3>
-              <p className="text-teal-blue mb-3">Relationship Counselor</p>
-              <p className="text-dark-gray text-sm">
-                Tigist specializes in couples therapy and relationship counseling with a focus on communication and conflict resolution.              
-              </p>
+              <h3 className="text-2xl font-bold text-peach mb-2 tracking-tight">Liham kinfe</h3>
+              <p className="text-soft-blue font-semibold mb-4 uppercase tracking-wide">Psychologist, Health Professional</p>
             </motion.div>
           </div>
         </div>

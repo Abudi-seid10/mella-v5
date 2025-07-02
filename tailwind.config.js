@@ -10,6 +10,8 @@ module.exports = {
       colors: {
         'rose-red': '#D62D69',
         'teal-blue': '#53BACC',
+        'peach': '#FFCBA4',
+        'soft-blue': '#A3C4F3',
         'dark-gray': '#333333',
         'light-pastel-1': '#F8E6EE',
         'light-pastel-2': '#E6F4F7',

@@ -152,21 +152,19 @@ export default function ContactPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            {/* Replace with actual map or embed Google Maps */}
-            <div className="w-full h-full bg-light-pastel-2 flex items-center justify-center">
-              <div className="text-center p-8">
-                <div className="text-6xl mb-4">🗺️</div>
-                <div className="text-2xl font-medium text-teal-blue">Map Location</div>
-                <div className="text-sm text-dark-gray mt-2">
-                  (Replace with an actual map embed)
-                </div>
-              </div>
-            </div>
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13905.122712758852!2d38.78237582733037!3d8.992078287291022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85cef5ab402d%3A0x8467b6b037a24d49!2sAddis%20Ababa!5e1!3m2!1sen!2set!4v1751469475443!5m2!1sen!2set"
+              className="w-full h-full"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </motion.div>
           
           <div className="mt-8 text-center">
             <a 
-              href="https://maps.google.com" 
+              href="https://maps.app.goo.gl/m9fpgYpzQYMVWRS77" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center text-teal-blue hover:text-teal-blue/80 font-medium"

@@ -13,7 +13,7 @@ const services = [
   {
     id: 'individual-counseling',
     title: 'Individual Counseling',
-    icon: UserPlus,
+    icon: UserPlus, 
     description: 'Our one-on-one therapy sessions provide a safe, confidential space for you to explore your thoughts, feelings, and challenges with a trained professional. We tailor our approach to your unique needs, helping you develop coping strategies, gain insights, and work toward your personal goals.',
     benefits: [
       'Personalized attention and customized treatment plans',
@@ -203,20 +203,11 @@ export default function ServicesPage() {
                       transition={{ duration: 0.5 }}
                     >
                       <div className="relative w-full h-[350px] rounded-2xl overflow-hidden bg-light-pastel-2 flex items-center justify-center">
-                        {/* Replace with actual service images */}
-                        <div className="text-center p-8">
-                          <div className="text-6xl mb-4">
-                            {service.id === 'individual-counseling' && '👤'}
-                            {service.id === 'virtual-counseling' && '💻'}
-                            {service.id === 'art-therapy' && '🎨'}
-                            {service.id === 'couples-counseling' && '❤️'}
-                            {service.id === 'group-therapy' && '👥'}
-                          </div>
-                          <div className="text-2xl font-medium text-teal-blue">{service.title} Image</div>
-                          <div className="text-sm text-dark-gray mt-2">
-                            (Replace with actual {service.title.toLowerCase()} image)
-                          </div>
-                        </div>
+                        <img
+                          src={`/${service.id}.jpg`}
+                          alt={`${service.title} service at Mella Counseling Center`}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
                     </motion.div>
                   </div>
