@@ -58,7 +58,7 @@ const Hero = () => {
               {/* Hero image showing a Black female therapist with client */}
               <div className="absolute inset-0 rounded-2xl overflow-hidden">
                 <img 
-                  src="https://img.freepik.com/free-photo/medium-shot-smiley-doctor-patient_23-2149941525.jpg?w=1380&t=st=1751463580~exp=1751467180~hmac=85544851000c4c6523165017473a9ffdc0354160b4fd65772cb6fc3dba3744ae" 
+                  src="/main.jpg" 
                   alt="Black female therapist in consultation with client" 
                   className="w-full h-full object-cover"
                 />
